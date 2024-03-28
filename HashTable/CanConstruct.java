@@ -1,5 +1,5 @@
 package HashTable;
-
+//赎金信
 
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {

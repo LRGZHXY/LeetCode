@@ -1,5 +1,5 @@
 package HashTable;
-
+//两数之和
 import java.util.*;
 
 public class TwoSum {
