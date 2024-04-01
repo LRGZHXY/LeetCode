@@ -14,7 +14,7 @@ class Solution {
             // 排序之后如果第一个元素已经大于零，那么无论如何组合都不可能凑成三元组，直接返回结果就可以了
             if (nums[i] > 0) {
                 return result;
-            }
+            }{
 
             if (i > 0 && nums[i] == nums[i - 1]) {  // 去重a
                 continue;
