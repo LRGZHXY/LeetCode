@@ -1,6 +1,5 @@
-package HashTable;
+package HashTable_test;
 //四数相加
-import java.util.HashMap;
 import java.util.HashMap;
 import java.util.Map;
 

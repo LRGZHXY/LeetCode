@@ -1,4 +1,4 @@
-package HashTable;
+package HashTable_test;
 //三数之和
 import java.util.ArrayList;
 import java.util.Arrays;

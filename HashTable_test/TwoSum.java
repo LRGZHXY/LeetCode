@@ -1,4 +1,4 @@
-package HashTable;
+package HashTable_test;
 //两数之和
 import java.util.*;
 

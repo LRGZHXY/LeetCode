@@ -1,4 +1,4 @@
-package HashTable;
+package HashTable_test;
 //快乐数
 import java.util.HashSet;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package HashTable;
+package HashTable_test;
 //赎金信
 
 class Solution {
