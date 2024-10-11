@@ -1,26 +1,20 @@
-import java.util.Deque;
-import java.util.LinkedList;
-
 class Solution {
-    public int evalRPN(String[] tokens) {
-        Deque<Integer> deque=new LinkedList<>();
-
-        for(int i=0;i<tokens.length;i++){
-            if(tokens[i].equals("+")){
-                deque.push(deque.pop()+deque.pop());
-            }else if(tokens[i].equals("-")){
-                deque.push(-deque.pop()+deque.pop());
-            }else if(tokens[i].equals("*")){
-                deque.push(deque.pop()*deque.pop());
-            }else if(tokens[i].equals("/")){
-                int a=deque.pop();
-                int b=deque.pop();
-                deque.push(b/a);
-            }else{
-                deque.push(Integer.valueOf(tokens[i]));
+    public int[] dailyTemperatures(int[] temperatures) {
+        int[] result=new int[temperatures.length];
+        Stack<Integer> stack=new Stack<>();
+        stack.push(0);
+        for(int i=1;i<temperatures.length;i++){
+            if(temperatures[i]<=temperatures[stack.peek()]){
+                stack.push(i);
+            }
+            else{
+                while(!stack.isEmpty()&&temperatures[i]>temperatures[stack.peek()]){
+                    result[stack.peek()]=i-stack.peek();
+                    stack.pop();
+                }
+                stack.push(i);
             }
         }
-
-        return deque.pop();
+        return result;
     }
 }
