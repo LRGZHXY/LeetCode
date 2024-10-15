@@ -95,3 +95,29 @@ class Solution {
         return root;
     }
 }
+
+class Solution {
+    public boolean repeatedSubstringPattern(String s) {
+        if(s.equals(" ")){
+            return false;
+        }
+        int len=s.length();
+        s=" "+s;
+        int[] next=new int[len+1];
+        char[] ch=s.toCharArray();
+        int j=0;
+        for(int i=2;i<=len;i++){
+            while(j>0&&ch[i]!=ch[j+1]){
+                j=next[j];
+            }
+            if(ch[i]==ch[j+1]){
+                j++;
+            }
+            next[i]=j;
+        }
+        if(next[len]>0&&len%(len-next[len])==0){
+            return true;
+        }
+        return false;
+    }
+}
