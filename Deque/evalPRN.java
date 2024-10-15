@@ -121,3 +121,23 @@ class Solution {
         return false;
     }
 }
+
+class Solution {
+    public int strStr(String haystack, String needle) {
+        int m=haystack.length();
+        int n=needle.length();
+        char[] h=haystack.toCharArray();
+        char[] x=needle.toCharArray();
+        for(int i=0;i<m-n+1;i++){
+            int a=i,b=0;
+            while(b<n&&h[a]==x[b]){
+                a++;
+                b++;
+            }
+            if(b==n){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
